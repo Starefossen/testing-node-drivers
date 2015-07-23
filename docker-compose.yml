@@ -1,0 +1,11 @@
+noderedis:
+    image: iojs
+    working_dir: /usr/src/app
+    links:
+        - redis
+    volumes:
+        - noderedis:/usr/src/app
+    command: npm test
+
+redis:
+    image: redis
