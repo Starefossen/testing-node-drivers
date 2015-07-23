@@ -18,7 +18,7 @@ $ git submodule add -b some-branch git@github.com:user/repo.git drivername
 ```
 
 The `drivername` must be the same name that you would like to name the service
-in the [docker-compose.yml](blob/master/docker-compose.yml) configuration.
+in the [docker-compose.yml](docker-compose.yml) configuration.
 
 This is the configutation for `noderedis`:
 
