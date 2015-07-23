@@ -22,7 +22,7 @@ in the [docker-compose.yml](blob/master/docker-compose.yml) configuration.
 
 This is the configutation for `noderedis`:
 
-```
+```yml
 noderedis:
     image: iojs
     working_dir: /usr/src/app
