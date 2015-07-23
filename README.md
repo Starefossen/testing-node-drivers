@@ -1,5 +1,8 @@
 # Testing Node Drivers
 
+Testing popular database drivers for Node.JS using Docker and Docker Compose to
+handle external dependencies.
+
 ## Requirements
 
 * Docker >= v1.5
