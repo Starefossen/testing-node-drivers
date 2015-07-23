@@ -2,3 +2,6 @@
 	path = noderedis
 	url = git@github.com:Starefossen/node_redis.git
 	branch = enable-docker-testing
+[submodule "nodeetcd"]
+	path = nodeetcd
+	url = git@github.com:stianeikeland/node-etcd.git
