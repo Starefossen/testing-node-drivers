@@ -42,5 +42,5 @@ redis:
 ## Running Driver Tests
 
 ```
-./run.sh
+$ ./run.sh
 ```
