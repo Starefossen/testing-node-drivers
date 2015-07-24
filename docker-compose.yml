@@ -10,16 +10,16 @@ noderedis:
 redis:
     image: redis
 
-nodeetcd:
+etcd:
     image: iojs
     working_dir: /usr/src/app
     links:
-        - etcd
+        - etcddb:etcd
     volumes:
-        - nodeetcd:/usr/src/app
+        - etcd:/usr/src/app
     command: npm test
 
-etcd:
+etcddb:
     image: microbox/etcd
     command: -data-dir=/data --name=etcd
 
