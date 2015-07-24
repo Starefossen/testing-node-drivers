@@ -22,3 +22,22 @@ nodeetcd:
 etcd:
     image: microbox/etcd
     command: -data-dir=/data --name=etcd
+
+memcached:
+    image: iojs
+    working_dir: /usr/src/app
+    links:
+        - memcacheddb:memcached
+    volumes:
+        - memcached:/usr/src/app
+    command: npm test
+    environment:
+        - MEMCACHED__HOST=memcached
+
+memcacheddb:
+    image: memcached
+    ports:
+        - 11211
+        - 11212
+        - 11213
+    command: memcached -l 0.0.0.0:11211,0.0.0.0:11212,0.0.0.0:11213
