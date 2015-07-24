@@ -1,5 +1,5 @@
 [submodule "noderedis"]
-	path = noderedis
+	path = redis
 	url = git@github.com:Starefossen/node_redis.git
 	branch = enable-docker-testing
 [submodule "nodeetcd"]

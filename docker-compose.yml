@@ -1,13 +1,13 @@
-noderedis:
+redis:
     image: iojs
     working_dir: /usr/src/app
     links:
-        - redis
+        - redisdb:redis
     volumes:
-        - noderedis:/usr/src/app
+        - redis:/usr/src/app
     command: npm test
 
-redis:
+redisdb:
     image: redis
 
 etcd:
