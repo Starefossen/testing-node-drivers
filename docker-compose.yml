@@ -5,10 +5,17 @@ redis:
         - redisdb:redis
     volumes:
         - redis:/usr/src/app
+    volumes_from:
+        - redisdb
     command: npm test
+    environment:
+        - REDIS__HOST=redis
 
 redisdb:
     image: redis
+    volumes:
+        - /tmp/
+    command: redis-server --unixsocket /tmp/redis.sock --unixsocketperm 777
 
 etcd:
     image: iojs
