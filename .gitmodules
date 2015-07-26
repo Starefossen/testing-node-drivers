@@ -9,3 +9,7 @@
 	path = memcached
 	url = git@github.com:Starefossen/memcached.git
   branch = enable-docker-testing
+[submodule "postgres"]
+	path = postgres
+	url = git@github.com:Starefossen/node-postgres.git
+  branch = enable-docker-testing

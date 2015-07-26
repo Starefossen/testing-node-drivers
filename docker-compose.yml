@@ -48,3 +48,21 @@ memcacheddb:
         - 11212
         - 11213
     command: memcached -l 0.0.0.0:11211,0.0.0.0:11212,0.0.0.0:11213
+
+postgres:
+    image: iojs
+    working_dir: /usr/src/app
+    links:
+        - postgresdb:postgres
+    volumes:
+        - postgres:/usr/src/app
+    command: npm test connectionString=pg://postgres@postgres:5432/postgres
+    environment:
+        - POSTGRES__HOST=postgres
+        - PGPORT=5432
+        - PGHOST=postgres
+        - PGUSER=postgres
+        - PGDATABASE=postgres
+
+postgresdb:
+    image: postgres
